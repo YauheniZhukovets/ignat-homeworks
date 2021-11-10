@@ -1,0 +1,36 @@
+.message {
+    display: flex;
+    align-items: end;
+    margin: 10px
+}
+
+.imag {
+    border-radius: 100px;
+    height: 60px;
+    width: 60px;
+
+}
+
+.text {
+    background-color: black;
+    padding: 10px;
+    border-radius: 10px 10px 10px 0
+}
+
+.name {
+    color: blueviolet;
+    font-weight: bold;
+}
+
+.mess {
+    word-wrap: break-word;
+    max-width: 300px;
+    min-width: 150px;
+    color: antiquewhite;
+}
+
+.time {
+    color: azure;
+    display: flex;
+    justify-content: end;
+}
