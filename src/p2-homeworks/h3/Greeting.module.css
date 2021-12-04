@@ -1,7 +1,56 @@
-.someClass {
-
+.greeting {
+    display: flex;
+    align-items: flex-start;
 }
 
 .error {
-    border: 1px solid red;
+    color: red;
+    height: 21px;
+    margin-left: 10px;
+}
+
+.input {
+    margin: 10px;
+    background: black;
+    color: cornflowerblue;
+}
+
+.input:focus {
+    outline: none;
+    border: cornflowerblue solid 2px;
+}
+
+.errorInput {
+    margin: 10px;
+
+    background: black;
+    color: cornflowerblue;
+
+    border: 2px solid red;
+    outline: none;
+}
+
+.button {
+    margin: 10px;
+    width: 60px;
+
+    background: black;
+    color: cornflowerblue;
+    outline: none;
+}
+
+.button:focus {
+    outline: cornflowerblue;
+}
+
+.button:active {
+    background: cornflowerblue;
+}
+
+.button:disabled {
+    color: black;
+}
+
+.count {
+    margin: 10px;
 }
