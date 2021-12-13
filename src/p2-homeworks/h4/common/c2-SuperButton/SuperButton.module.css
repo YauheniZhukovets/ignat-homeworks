@@ -1,7 +1,26 @@
 .default {
-
+    background: #656ea8;
+    color: #a2d499;
+    outline: none;
 }
 
 .red {
-    background: red;
+    background: #cb8686;
+}
+
+.button {
+    position: relative;
+    margin: 10px;
+}
+
+.button:focus {
+    outline: #a5ced4;
+}
+
+.button:active {
+    background: #bc9ee1;
+}
+.button:disabled {
+    color: #797979;
+    cursor: auto;
 }

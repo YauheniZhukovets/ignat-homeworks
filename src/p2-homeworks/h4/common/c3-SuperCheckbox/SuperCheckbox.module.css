@@ -1,4 +1,17 @@
 .checkbox {
+    appearance: none;
+
+    width: 15px;
+    height: 15px;
+
+    border: solid 2px black;
+    background: #e3e3f1;
+}
+
+.checkbox:checked {
+    appearance: none;
+    background-size: 11px;
+    background-image: url("https://pic.onlinewebfonts.com/svg/img_354384.png");
 
 }
 
