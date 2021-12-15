@@ -12,6 +12,8 @@ export type MessagePropsType = {
     return (
         <div className={sty.message} >
             <img src={props.avatar} alt={""} className={sty.imag}/>
+            <div className={sty.nook}></div>
+
             <div className={sty.text}>
                 <div className={sty.name}>{props.name}</div>
                 <div className={sty.mess}>{props.message}</div>
