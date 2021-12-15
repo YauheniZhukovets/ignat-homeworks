@@ -11,7 +11,7 @@ function Header() {
             <NavLink to={PATH.JUNIOR_PLUS} className={({isActive})=> isActive ? s.activeLink : s.defLink}>JuniorPlus</NavLink>
             <img className={s.picBlock}
                 src={'https://static-sl.insales.ru/images/products/1/86/125575254/medium_znak-e-02-01-napravlyayuschaya-strelka.png'}
-                alt={'block'}/>
+                alt={'picBlock'}/>
 
         </div>
     )
