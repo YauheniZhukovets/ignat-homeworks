@@ -1,0 +1,7 @@
+.error {
+    height: 20em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: white;
+}
