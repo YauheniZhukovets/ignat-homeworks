@@ -1,5 +1,5 @@
 import React from 'react'
-import sty from './Message.module.css'
+import s from './Message.module.css'
 
 export type MessagePropsType = {
     avatar: string
@@ -10,14 +10,14 @@ export type MessagePropsType = {
 
  function Message(props: MessagePropsType) {
     return (
-        <div className={sty.message} >
-            <img src={props.avatar} alt={""} className={sty.imag}/>
-            <div className={sty.nook}></div>
+        <div className={s.message} >
+            <img src={props.avatar} alt={""} className={s.imag}/>
+            <div className={s.nook}> </div>
 
-            <div className={sty.text}>
-                <div className={sty.name}>{props.name}</div>
-                <div className={sty.mess}>{props.message}</div>
-                <div className={sty.time}>{props.time}</div>
+            <div className={s.text}>
+                <div className={s.name}>{props.name}</div>
+                <div className={s.mess}>{props.message}</div>
+                <div className={s.time}>{props.time}</div>
             </div>
         </div>
     )
