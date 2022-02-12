@@ -1,26 +1,36 @@
 import React from 'react'
 import {AffairType} from './HW2';
-import  style from './Affairs.module.css'
+import s from './Affairs.module.css'
+import SuperButton from '../h4/common/c2-SuperButton/SuperButton';
 
 type AffairPropsType = {
-    // key не нужно типизировать
-    affair: AffairType // need to fix any
-    deleteAffairCallback: (id:number)=>void // need to fix any
+    affair: AffairType
+    deleteAffairCallback: (_id: number) => void
 }
 
-function Affair(props: AffairPropsType) {
-    const deleteCallback = () => {props.deleteAffairCallback(props.affair._id)}// need to fix
+export const Affair = (props: AffairPropsType) => {
+    const deleteCallback = () => {
+        props.deleteAffairCallback(props.affair._id)
+    }
 
     return (
-        <div className={style.affair}>
-            <button onClick={deleteCallback}>X</button>
+        <div className={s.affairs}>
+            <span>{props.affair.name}</span>
+            <span className={
+                props.affair.priority === 'low'
+                    ? s.lowFilter
+                    : props.affair.priority === 'middle'
+                        ? s.middleFilter
+                        : s.highFilter}>
 
-            <div>{props.affair.name}</div>
-            <div>[{props.affair.priority}]</div>
+                [{props.affair.priority}]</span>
+            <SuperButton red onClick={deleteCallback}>
+                X
+            </SuperButton>
 
-
+            {/*<span><button className={s.buttonDelete}
+                          onClick={deleteCallback}
+            >X</button></span>*/}
         </div>
     )
 }
-
-export default Affair

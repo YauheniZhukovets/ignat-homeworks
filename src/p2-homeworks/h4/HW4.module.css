@@ -1,13 +1,37 @@
 .blue {
-    border-bottom: 5px solid blue;
+    border-bottom: 1px solid blue;
 }
 
 .column {
+    min-height: 90px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.superInput {
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+}
 
+.superButton {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.superCheckbox {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
 }
 
 .testSpanError {
     color: blue;
 }
+
+
+

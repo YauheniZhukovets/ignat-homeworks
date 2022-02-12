@@ -1,7 +1,16 @@
+.blockButton {
+    display: flex;
+}
+
+.users {
+    margin: 5px 8px;
+    min-height: 130px;
+}
+
 .user {
-    margin-left: 13px;
+    max-width: 230px;
     display: flex;
     justify-content: space-between;
-    width: 235px;
+    color: rgba(159, 23, 23, 0.75);
 
 }

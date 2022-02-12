@@ -1,38 +1,55 @@
 import React from 'react'
-import Affair from './Affair'
+import {Affair} from './Affair'
 import {AffairType, FilterType} from './HW2'
+import s from './Affairs.module.css';
+import SuperButton from '../h4/common/c2-SuperButton/SuperButton';
 
-type AffairsPropsType = { // need to fix any
+
+type AffairsPropsType = {
     data: AffairType[]
-    setFilter: (filter:FilterType)=>void
-    deleteAffairCallback: (_id: number)=>void
+    setFilter: (filter: FilterType) => void
+    deleteAffairCallback: (_id: number) => void
+    filter: FilterType
 }
 
-function Affairs(props: AffairsPropsType) {
+export const Affairs = (props: AffairsPropsType) => {
     const mappedAffairs = props.data.map((a: AffairType) => (
-        <Affair // should work
-            key={a._id} // кеи ОБЯЗАТЕЛЬНЫ в 99% - так что лучше их писать всегда при создании компонент в мапе
+        <Affair
+            key={a._id}
             affair={a}
             deleteAffairCallback={props.deleteAffairCallback}
         />
     ))
 
-    const setAll = () => {props.setFilter('all')} // need to fix
-    const setHigh = () => {props.setFilter('high')}
-    const setMiddle = () => {props.setFilter('middle')}
-    const setLow = () => {props.setFilter('low')}
+    const setHandlerFilter = (filter: FilterType) => {
+        props.setFilter(filter)
+    }
 
     return (
-        <div>
+        <div className={s.blockAffairs}>
+            <div>
+                {mappedAffairs}
+            </div>
 
-            {mappedAffairs}
+            <div className={s.buttons}>
+                <SuperButton
+                    onClick={() => setHandlerFilter('all')}
+                >All</SuperButton>
 
-            <button onClick={setAll}>All</button>
-            <button onClick={setHigh}>High</button>
-            <button onClick={setMiddle}>Middle</button>
-            <button onClick={setLow}>Low</button>
+                <SuperButton
+                    onClick={() => setHandlerFilter('high')}
+                >High</SuperButton>
+
+                <SuperButton
+                    onClick={() => setHandlerFilter('middle')}
+                >Middle</SuperButton>
+
+                <SuperButton
+                    onClick={() => setHandlerFilter('low')}
+                >Low</SuperButton>
+            </div>
         </div>
     )
 }
 
-export default Affairs
+

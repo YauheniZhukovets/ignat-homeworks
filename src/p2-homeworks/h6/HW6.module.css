@@ -1,0 +1,11 @@
+.blockEditableSpan {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 30px;
+    margin-left: 5px;
+}
+
+.buttonBlock {
+    display: flex;
+}

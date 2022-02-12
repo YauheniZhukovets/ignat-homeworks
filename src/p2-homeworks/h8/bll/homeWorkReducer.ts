@@ -1,33 +1,38 @@
 import {UserType} from '../HW8';
 
-export const homeWorkReducer = (state: UserType[], action: ActionType): UserType[] => {
+export const homeWorkReducer = (state: Array<UserType>, action: CommonActionType): Array<UserType> => {
     switch (action.type) {
         case 'SORT-UP': {
-            return [...state].sort((a, b) => a.name < b.name ? -1 : 0)
+            let copyState = state.map(m=>m)
+            copyState.sort( (a, b) => a.name < b.name ? -1 : 1 )
+            return copyState
         }
         case 'SORT-DOWN': {
-            return [...state].sort((a, b) => a.name > b.name ? 1 : 0)
+            let copyState = state.map(m=>m)
+            copyState.sort( (a, b) => b.name < a.name ? -1 : 1 )
+            return copyState
         }
-        case 'CHECK': {
-            return state.filter(f=>f.age>=action.payload.check)
+        case 'AGE-CHECK': {
+            return state.filter(f => f.age > action.payload)
         }
-        default: return state
+        default:
+            return state
     }
 }
 
-type ActionType = SortUpACType | SortDownACType | SortCheckACType
+export type CommonActionType = sortUpACType | sortDownACType | ageCheckACType
 
-type SortUpACType = ReturnType<typeof sortUpAC>
+export type sortUpACType = ReturnType<typeof sortUpAC>
 export const sortUpAC = () => {
-    return{type: 'SORT-UP'} as const
+    return {type: 'SORT-UP'} as const
 }
-type SortDownACType = ReturnType<typeof sortDownAC>
+
+export type sortDownACType = ReturnType<typeof sortDownAC>
 export const sortDownAC = () => {
-    return{type: 'SORT-DOWN'} as const
-}
-type SortCheckACType = ReturnType<typeof sortCheckAC>
-export const sortCheckAC = (check:number) => {
-    return{type: 'CHECK', payload: {check}} as const
+    return {type: 'SORT-DOWN'} as const
 }
 
-
+export type ageCheckACType = ReturnType<typeof ageCheckAC>
+export const ageCheckAC = (payload: number) => {
+    return {type: 'AGE-CHECK', payload: 18} as const
+}

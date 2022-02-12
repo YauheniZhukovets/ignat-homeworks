@@ -1,44 +1,58 @@
 .message {
     display: flex;
-    align-items: end;
-
-    margin: 10px
 }
 
-.imag {
-    height: 60px;
-    width: 60px;
+.images {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    margin-left: 10px;
+}
 
-    border-radius: 100px;
+
+.content {
+    display: flex;
+    justify-content: space-around;
+    border: rgba(123, 234, 223, 0.43) ;
+    border-radius: 5px 5px 5px 0;
+    width: 210px;
+    background-color: rgba(123, 234, 223, 0.43);
 
 }
 
-.text {
-    padding: 10px;
-    border-radius: 10px 10px 10px 0;
-    background: rgba(0, 0, 255, 0.3);
-}
-
-.nook {
-    width: 15px;
-    height: 15px;
-    background: radial-gradient(circle at 0px 0px, rgba(0, 0, 0, 0) 15px, rgba(0, 0, 255, 0.3) 0);
+.textContent {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .name {
-    color: #06064d;
+    color: rgb(2, 42, 40);
     font-weight: bold;
 }
 
-.mess {
-    word-wrap: break-word;
-    max-width: 300px;
-    min-width: 150px;
-    color: antiquewhite;
+.time {
+    display: flex;
+    align-self: flex-end;
+    color: #8988ab;
 }
 
-.time {
-    color: azure;
-    display: flex;
-    justify-content: end;
+.edge {
+
+    width: 10px;
+    height: 100%;
+    background: white;
+    border-bottom-right-radius: 20px;
 }
+
+.containerEdge {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    background-color: rgba(123, 234, 223, 0.43);
+}
+
+
+
+
+

@@ -1,5 +1,5 @@
 import React, {useState} from 'react'
-import {homeWorkReducer, sortCheckAC, sortDownAC, sortUpAC} from './bll/homeWorkReducer'
+import {ageCheckAC, homeWorkReducer, sortDownAC, sortUpAC} from './bll/homeWorkReducer'
 import SuperButton from '../h4/common/c2-SuperButton/SuperButton'
 import s from './HW8.module.css'
 
@@ -19,29 +19,35 @@ const initialPeople = [
 ]
 
 function HW8() {
-    const [people, setPeople] = useState<Array<UserType>>(initialPeople)
+    const [people, setPeople] = useState<Array<UserType>>(initialPeople) // need to fix any
 
+    // need to fix any
     const finalPeople = people.map((p: UserType) => (
-        <div key={p._id} className={s.user}>
+        <div className={s.user}
+             key={p._id}
+        >
             <span>{p.name}</span>
-            <span>{p.age}</span>
+            <span style={ {color: 'rgba(13, 39, 121, 0.75)'} }>{p.age}</span>
+
         </div>
     ))
-
-    const sortUp = () => setPeople(homeWorkReducer(initialPeople, sortUpAC()))
-    const sortDown = () => setPeople(homeWorkReducer(initialPeople, sortDownAC()))
-    const sortCheck = () => setPeople(homeWorkReducer(initialPeople, sortCheckAC(18)))
-
+    const sortUp = () => setPeople(homeWorkReducer(initialPeople,sortUpAC()))
+    const sortDown = () => setPeople(homeWorkReducer(initialPeople ,sortDownAC()))
+    const ageCheck = () => setPeople(homeWorkReducer(initialPeople, ageCheckAC(18)))
 
     return (
         <div>
             <hr/>
             homeworks 8
 
-            {finalPeople}
-            <div><SuperButton onClick={sortUp}>sort up</SuperButton>
-                <SuperButton onClick={sortDown}>sort down</SuperButton>
-                <SuperButton onClick={sortCheck}>check 18</SuperButton>
+            <div className={s.users}>
+                {finalPeople}
+            </div>
+
+            <div className={s.blockButton}>
+                <div><SuperButton onClick={sortUp}>sort up</SuperButton></div>
+                <div><SuperButton onClick={sortDown}>sort down</SuperButton></div>
+                <div><SuperButton onClick={ageCheck} red>check 18</SuperButton></div>
             </div>
 
             <hr/>

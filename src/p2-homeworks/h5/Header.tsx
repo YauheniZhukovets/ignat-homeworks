@@ -1,19 +1,23 @@
 import React from 'react'
-import {NavLink} from 'react-router-dom';
-import {PATH} from './Rout';
-import s from './Header.module.css'
+import {NavLink} from 'react-router-dom'
+import {PATH} from './Routes';
+import s from './pages/Header.module.css'
+
+const setActive = ({isActive}: { isActive: boolean }) => isActive ? s.activeLink : s.item
 
 function Header() {
-    return (
-        <div className={s.header}>
-            <NavLink to={PATH.PRE_JUNIOR} className={({isActive})=> isActive ? s.activeLink : s.defLink}>pre-junior</NavLink>
-            <NavLink to={PATH.JUNIOR} className={({isActive})=> isActive ? s.activeLink : s.defLink}>junior</NavLink>
-            <NavLink to={PATH.JUNIOR_PLUS} className={({isActive})=> isActive ? s.activeLink : s.defLink}>JuniorPlus</NavLink>
-            <img className={s.picBlock}
-                src={'https://static-sl.insales.ru/images/products/1/86/125575254/medium_znak-e-02-01-napravlyayuschaya-strelka.png'}
-                alt={'picBlock'}/>
 
+    return (
+        <div className={s.containerBlockHeader}>
+            <div>
+                <NavLink className={setActive} to={PATH.PRE_JUNIOR}> Pre-junior </NavLink>
+                <NavLink className={setActive} to={PATH.JUNIOR}> Junior </NavLink>
+                <NavLink className={setActive} to={PATH.PLUS_JUNIOR}> Junior-Plus </NavLink>
+            </div>
+            <div className={s.triangle}> </div>
         </div>
+
+
     )
 }
 

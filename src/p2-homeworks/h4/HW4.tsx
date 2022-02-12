@@ -4,9 +4,9 @@ import s from './HW4.module.css'
 import SuperButton from './common/c2-SuperButton/SuperButton'
 import SuperCheckbox from './common/c3-SuperCheckbox/SuperCheckbox'
 
-function HW4() {
+export const HW4 = () => {
     const [text, setText] = useState<string>('')
-    const error = text ? '' : 'error'
+    const error = text ? '' : 'Error!!! Input is empty'
 
     const showAlert = () => {
         if (error) {
@@ -23,22 +23,24 @@ function HW4() {
         <div>
             <hr/>
             homeworks 4
+
             <div className={s.column}>
-                <div>
+                <div className={s.superInput}>
                     <SuperInputText
                         value={text}
                         onChangeText={setText}
                         onEnter={showAlert}
                         error={error}
-                        // spanClassName={s.testSpanError}
+                        //spanClassName={s.testSpanError}
                     />
 
                     <SuperInputText
                         className={s.blue} // проверьте, рабоет ли смешивание классов
                     />
                 </div>
-                {/*----------------------------------------------------*/}
-                <div>
+
+
+                <div className={s.superButton}>
                     <SuperButton>
                         default
                     </SuperButton>
@@ -54,19 +56,20 @@ function HW4() {
                         disabled
                     </SuperButton>
                 </div>
-                {/*----------------------------------------------------*/}
-                <div>
+
+                <div className={s.superCheckbox}>
                     <SuperCheckbox
                         checked={checked}
                         onChangeChecked={setChecked}
                     >
-                        some text {/*// этот текст попадёт в children*/}
+                        Click me! {/*// этот текст попадёт в children*/}
                     </SuperCheckbox>
 
                     {/*// onChange тоже должен работать*/}
                     <SuperCheckbox checked={checked} onChange={testOnChange}/>
                 </div>
             </div>
+
             <hr/>
             {/*для личного творчества, могу проверить*/}
             {/*<AlternativeSuperInputText/>*/}
@@ -77,4 +80,4 @@ function HW4() {
     )
 }
 
-export default HW4
+

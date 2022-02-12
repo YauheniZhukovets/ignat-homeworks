@@ -1,39 +1,44 @@
-import React, {ChangeEvent,KeyboardEvent} from 'react'
+import React from 'react'
 import s from './Greeting.module.css'
+import SuperButton from '../h4/common/c2-SuperButton/SuperButton';
+import SuperInputText from '../h4/common/c1-SuperInputText/SuperInputText';
 
 type GreetingPropsType = {
-    name: string // need to fix any
-    setNameCallback: (e: ChangeEvent<HTMLInputElement>)=>void // need to fix any
-    addUser: ()=>void// need to fix any
-    onEnter: (e: KeyboardEvent<HTMLInputElement>) => void
-    error: string // need to fix any
-    totalUsers: number // need to fix any
+    name: string
+    setNameCallback: (text: string) => void
+    setKeyPress: () => void
+    addUser: () => void
+    error: string
+    totalUsers: number
+
 }
 
 // презентационная компонента (для верстальщика)
-const Greeting: React.FC<GreetingPropsType> = (
-    {name, setNameCallback, addUser, onEnter, error, totalUsers} // деструктуризация пропсов
+export const Greeting: React.FC<GreetingPropsType> = ({
+                                                          name,
+                                                          setNameCallback,
+                                                          setKeyPress,
+                                                          addUser,
+                                                          error,
+                                                          totalUsers,
+                                                      }
 ) => {
-
-    const inputClass = error ? s.errorInput : s.input // need to fix with (?:)
-
     return (
-        <div className={s.greeting}>
-            <div>
-                <input
-                    value={name}
-                    onChange={setNameCallback}
-                    className={inputClass}
-                    onKeyDown={onEnter}
-                    onBlur={setNameCallback}
-                />
-                <div className={s.error}>{error}</div>
-            </div>
+        <div className={s.blockGreeting}>
+            <SuperInputText
+                value={name}
+                onChangeText={setNameCallback}
+                onEnter={setKeyPress}
+                error={error}
+            />
 
-            <button onClick={addUser} className={s.button} disabled={!name}>add</button>
-            <div className={s.count}>{totalUsers}</div>
+            <SuperButton disabled={!name}
+                         onClick={addUser}
+            >add</SuperButton>
+
+            <span className={s.totalCount}>{totalUsers}</span>
         </div>
     )
 }
 
-export default Greeting
+

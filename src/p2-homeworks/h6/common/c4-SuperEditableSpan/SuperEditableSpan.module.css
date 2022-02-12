@@ -1,17 +1,9 @@
-.span {
-    display: inline-block;
-
-    height: 15px;
-    padding: 6px  ;
-
-    margin: 6px;
-;
+.spanClass {
+    height: auto;
+    font-size: 13px;
+    padding: 3px 0 5px 0;
 }
 
-
-
-.pic {
-    width: 20px;
-    height: 20px;
-
+.icon {
+    height: 12px
 }

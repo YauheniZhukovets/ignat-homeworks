@@ -1,16 +1,15 @@
 import React from 'react'
-import Message from "./Message";
+import {Message} from './Message';
+
 
 const messageData = {
-    avatar: 'https://w0.peakpx.com/wallpaper/544/324/HD-wallpaper-sexy-lady-mena-suvari-posing-blonde-beautiful-face-sexy.jpg',
-    name: 'Vika',
-    message: 'Hello! How are you?',
-    time: '22:00',
+    avatar: 'https://mtdata.ru/u7/photo8A7D/20488237865-0/original.png',
+    name: 'Elena',
+    message: 'Hi, Ignat. How are you?',
+    time: '23:59',
 }
 
-
-
-function HW1() {
+export const HW1 = () => {
     return (
         <div>
             <hr/>
@@ -30,5 +29,3 @@ function HW1() {
         </div>
     )
 }
-
-export default HW1

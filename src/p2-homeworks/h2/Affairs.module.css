@@ -1,3 +1,45 @@
-.affair {
+
+.blockAffairs {
     display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 255px;
+    min-height: 190px;
+    border: #9693cc solid;
+    background-color: #bfbde0;
+    border-radius: 10px;
+    padding: 4px;
+    margin-left: 5px;
+}
+
+.affairs {
+    margin: 4px;
+    display: flex;
+    justify-content: space-between;
+    width: 250px;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-between;
+    width: 250px;
+}
+
+.button {
+    width: 60px;
+    border-radius: 20%;
+    background-color: rgba(143, 90, 55, 0.43);
+}
+
+.lowFilter {
+    color: #53980f;
+}
+
+.middleFilter {
+    color: gold;
+}
+
+.highFilter {
+    color: #b00606;
 }

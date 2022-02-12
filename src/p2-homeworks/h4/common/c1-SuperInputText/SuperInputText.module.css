@@ -1,29 +1,31 @@
-.input:focus {
-    outline: none;
-    color: #8988ab;
-}
-
 .superInput {
-    margin: 10px;
-
-    background: #d2ceda;
-    color: #8988ab;
+    height: auto;
+    min-width: 50px;
+    font-size: 13px;
+    padding: 5px 0 5px 10px;
+    border: 1px solid #cecece;
+    background: #F6F6f6;
+    border-radius: 8px;
+}
+.superInput:focus {
+    outline: none;
 }
 
 .errorInput {
-    margin: 10px;
+    min-width: 50px;
+    font-size: 13px;
+    padding: 5px 0 5px 10px;
+    border: 1px solid #cecece;
+    border-bottom: 1px solid #f10606;
+    background: rgba(201, 201, 201, 0.57);
+    border-radius: 8px;
+    margin-bottom: 0;
 
-
-    background: #d2ceda;
-    color: #8988ab;
-
-    border: 2px solid #b95555;
+}
+.errorInput:focus {
+    outline: none;
 }
 
 .error {
-    height: 21px;
-
     color: red;
-    margin-left: 10px;
-
 }

@@ -1,7 +1,9 @@
-.checkbox {
+.radioCheckbox {
     display: none;
 }
-.labelCheckBox {
+
+.labelRadioCheckBox {
+    margin: 4px;
     display: inline-block;
     border: 2px solid #b2b1b1;
     width: 16px;
@@ -9,14 +11,13 @@
     position: relative;
     vertical-align: middle;
     box-sizing: border-box;
-    margin-right: 4px;
 }
 
-.labelCheckBox:hover {
+.labelRadioCheckBox:hover {
     box-shadow: 0 0 3px gray;
 }
 
-.labelCheckBox:before {
+.labelRadioCheckBox:before {
     content: '';
     background: #1c1e25;
     width: 8px;
@@ -28,13 +29,6 @@
     left: 2px;
 }
 
-.checkbox:checked + .labelCheckBox:before {
+.radioCheckbox:checked + .labelRadioCheckBox:before {
     opacity: 1;
-}
-
-
-.spanClassName {
-    font-size: 16px;
-    font-weight: 700;
-    cursor: pointer;
 }
