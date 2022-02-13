@@ -10,9 +10,9 @@ function Header() {
     return (
         <div className={s.containerBlockHeader}>
             <div>
-                <NavLink className={setActive} to={PATH.PRE_JUNIOR}> Pre-junior </NavLink>
-                <NavLink className={setActive} to={PATH.JUNIOR}> Junior </NavLink>
-                <NavLink className={setActive} to={PATH.PLUS_JUNIOR}> Junior-Plus </NavLink>
+                <NavLink className={setActive} to={PATH.PRE_JUNIOR}> <b> Pre-junior </b> </NavLink>
+                <NavLink className={setActive} to={PATH.JUNIOR}> <b>Junior</b></NavLink>
+                <NavLink className={setActive} to={PATH.PLUS_JUNIOR}> <b>Junior-Plus</b> </NavLink>
             </div>
             <div className={s.triangle}> </div>
         </div>

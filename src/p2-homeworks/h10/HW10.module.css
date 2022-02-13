@@ -1,0 +1,10 @@
+.blockPreloader {
+    display: flex;
+    align-items: center;
+    min-height: 40px;
+}
+
+.preloader {
+    margin-left: 30px;
+    width: 35px;
+}

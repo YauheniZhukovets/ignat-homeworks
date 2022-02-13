@@ -1,0 +1,24 @@
+.blockClock {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 140px;
+    min-height: 75px;
+}
+
+.stringTime {
+    margin-left: 15px;
+    font-weight: 700;
+    color: #0a4d49;
+}
+
+.stringDate {
+    margin-left: 10px;
+    font-weight: 1000;
+    color: #22a3da;
+}
+
+.buttonBlock {
+    display: flex;
+    flex-direction: row;
+}

@@ -4,6 +4,7 @@
     margin: 5px;
     border: 1px solid #9f9f9f;
     border-radius: 3px;
+    background: transparent;
 }
 
 .selectWrapper:hover {
@@ -14,7 +15,7 @@
 .selectWrapper select {
     height: 28px;
     padding: 0 20px 0 7px;
-    background: transparent;
+    background-color: transparent;
     border: 0;
     appearance: none; /* remove arrow        */
     -webkit-appearance: none; /* remove arrow Chrome */

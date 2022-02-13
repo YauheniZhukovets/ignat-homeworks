@@ -17,9 +17,9 @@
     display: flex;
     position: relative;
     height: 22px;
-    min-width: 290px;
+    width: 260px;
     transition: 0.6s;
-    left: -205px;
+    left: -218px;
 }
 
 .containerBlockHeader:hover {
