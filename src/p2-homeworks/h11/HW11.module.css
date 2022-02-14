@@ -1,0 +1,10 @@
+
+.singleRange {
+    display: flex;
+    justify-content: space-between;
+    gap: 5%;
+    align-items: center;
+    width: 330px;
+    margin: 10px 0 20px 20px;
+}
+
