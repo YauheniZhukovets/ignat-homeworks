@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/ignat-homeworks/static/css/main.26876231.chunk.css",
-    "main.js": "/ignat-homeworks/static/js/main.a0b5ceab.chunk.js",
-    "main.js.map": "/ignat-homeworks/static/js/main.a0b5ceab.chunk.js.map",
+    "main.css": "/ignat-homeworks/static/css/main.ae70c6ea.chunk.css",
+    "main.js": "/ignat-homeworks/static/js/main.9796399e.chunk.js",
+    "main.js.map": "/ignat-homeworks/static/js/main.9796399e.chunk.js.map",
     "runtime-main.js": "/ignat-homeworks/static/js/runtime-main.0a3fcc8e.js",
     "runtime-main.js.map": "/ignat-homeworks/static/js/runtime-main.0a3fcc8e.js.map",
-    "static/js/2.b74636eb.chunk.js": "/ignat-homeworks/static/js/2.b74636eb.chunk.js",
-    "static/js/2.b74636eb.chunk.js.map": "/ignat-homeworks/static/js/2.b74636eb.chunk.js.map",
+    "static/js/2.c39f299b.chunk.js": "/ignat-homeworks/static/js/2.c39f299b.chunk.js",
+    "static/js/2.c39f299b.chunk.js.map": "/ignat-homeworks/static/js/2.c39f299b.chunk.js.map",
     "index.html": "/ignat-homeworks/index.html",
-    "static/css/main.26876231.chunk.css.map": "/ignat-homeworks/static/css/main.26876231.chunk.css.map",
-    "static/js/2.b74636eb.chunk.js.LICENSE.txt": "/ignat-homeworks/static/js/2.b74636eb.chunk.js.LICENSE.txt",
+    "static/css/main.ae70c6ea.chunk.css.map": "/ignat-homeworks/static/css/main.ae70c6ea.chunk.css.map",
+    "static/js/2.c39f299b.chunk.js.LICENSE.txt": "/ignat-homeworks/static/js/2.c39f299b.chunk.js.LICENSE.txt",
     "static/media/Spinner.b9ae601e.svg": "/ignat-homeworks/static/media/Spinner.b9ae601e.svg",
     "static/media/pencil.582f957d.svg": "/ignat-homeworks/static/media/pencil.582f957d.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.0a3fcc8e.js",
-    "static/js/2.b74636eb.chunk.js",
-    "static/css/main.26876231.chunk.css",
-    "static/js/main.a0b5ceab.chunk.js"
+    "static/js/2.c39f299b.chunk.js",
+    "static/css/main.ae70c6ea.chunk.css",
+    "static/js/main.9796399e.chunk.js"
   ]
 }
