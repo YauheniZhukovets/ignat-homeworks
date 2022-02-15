@@ -5,9 +5,48 @@ body {
     sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+
 }
 
 code {
     font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+
+.Dark {
+    transition: 1s;
+    background: dimgrey;
+    color: aliceblue;
+}
+
+.Dark-text {
+
+}
+
+.Red {
+    transition: 1s;
+    background: lightcoral;
+    color: aqua;
+
+}
+
+.Red-text {
+
+}
+
+.Green {
+    transition: 1s;
+    background: lightgreen;
+    color: darkslateblue;
+}
+
+.Green-text {
+
+}
+
+.White {
+    transition: 1s;
+    background: #f1f1f1;
+    color: #1c1e25;
 }

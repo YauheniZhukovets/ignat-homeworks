@@ -2,8 +2,12 @@
     display: none;
 }
 
+.lable {
+    padding: 0 5px;
+}
+
 .labelRadioCheckBox {
-    margin: 4px;
+    margin:  4px 5px;
     display: inline-block;
     border: 2px solid #b2b1b1;
     width: 16px;

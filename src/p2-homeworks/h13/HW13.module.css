@@ -1,0 +1,38 @@
+.generalBlock {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    margin: 5px;
+}
+
+.blockPreloader {
+    display: flex;
+    align-items: center;
+    min-height: 60px;
+}
+
+.preloader {
+    margin-left: 20px;
+    width: 46px;
+}
+
+.checkBox {
+    margin-left: 30px;
+    margin-bottom: 8px;
+
+}
+
+.message {
+    color: #0bab0b;
+    padding-left: 10px;
+    width: 150px;
+    min-height: 50px ;
+}
+
+.messageError {
+    font-weight: bold;
+    color: #ff1d1d;
+    padding-left: 10px;
+    width: 150px;
+    min-height: 50px ;
+}
