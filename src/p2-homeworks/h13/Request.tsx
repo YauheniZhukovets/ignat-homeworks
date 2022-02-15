@@ -8,15 +8,15 @@ import SuperButton from '../h4/common/c2-SuperButton/SuperButton';
 
 export const Request = () => {
 
-    const [state, setState] = useState<boolean>(true);
+    const [checkBox, setCheckBox] = useState<boolean>(true);
     const [message, setMessage] = useState<string>('')
     const [loading, setLoading] = useState<boolean>(false)
 
 
-    const RequestHandler = () => {
+    const onRequestHandler = () => {
         setMessage('')
         setLoading(true)
-        API.createPostRequest(state).then((res) => {
+        API.createPostRequest(checkBox).then((res) => {
             setMessage(res.data.errorText)
         })
             .catch((error) => {
@@ -34,8 +34,8 @@ export const Request = () => {
 
             <div className={s.checkBox}>
                 <SuperCheckbox
-                    checked={state}
-                    onChangeChecked={setState}
+                    checked={checkBox}
+                    onChangeChecked={setCheckBox}
                 />
             </div>
 
@@ -53,7 +53,7 @@ export const Request = () => {
             <div>
                 <SuperButton
                     disabled={loading}
-                    onClick={RequestHandler}
+                    onClick={onRequestHandler}
                 >
                     Request
                 </SuperButton>
