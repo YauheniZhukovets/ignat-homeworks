@@ -14,16 +14,17 @@ export const Request = () => {
 
 
     const onRequestHandler = () => {
-        setMessage('')
-        setLoading(true)
+        setMessage('');
+        setLoading(true);
+
         API.createPostRequest(checkBox).then((res) => {
-            setMessage(res.data.errorText)
+            setMessage(res.data.errorText);
         })
             .catch((error) => {
-                setMessage(error.response ? error.response.data.errorText : error.message)
+                setMessage(error.response ? error.response.data.errorText : error.message);
             })
             .finally(() => {
-                setLoading(false)
+                setLoading(false);
             })
     }
 

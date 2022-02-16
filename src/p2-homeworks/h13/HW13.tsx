@@ -8,7 +8,7 @@ const HW13 = () => {
         <div>
             <hr/>
 
-            <span>homeworks 12</span>
+            <span>homeworks 13</span>
 
             <Request/>
 

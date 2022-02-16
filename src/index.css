@@ -25,7 +25,7 @@ code {
 }
 
 .Red {
-    transition: 1s;
+    transition : 1s;
     background: lightcoral;
     color: aqua;
 
